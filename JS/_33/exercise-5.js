@@ -1,13 +1,18 @@
 function firstUncompletedNote(notes) {
-  // ...
+  return notes.find(note => {
+    return note.todos.some(x => {
+      return x.done === false;
+    });
+  })
+
+
 }
 
-const notes = [
-  {
+
+const notes = [{
     id: 1,
     description: 'Workout program',
-    todos: [
-      {
+    todos: [{
         id: 1,
         name: 'Push ups - 10 x 3',
         done: true
@@ -27,8 +32,7 @@ const notes = [
   {
     id: 2,
     description: 'Front-end Roadmap',
-    todos: [
-      {
+    todos: [{
         id: 1,
         name: 'Learn HTML',
         done: true
@@ -53,8 +57,7 @@ const notes = [
   {
     id: 3,
     description: 'My Movies Library',
-    todos: [
-      {
+    todos: [{
         id: 1,
         name: 'La città incantata',
         done: true
