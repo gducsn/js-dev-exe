@@ -1,5 +1,13 @@
 function getKeys(obj) {
-  return Object.keys(obj);
+
+  let chiavi = [];
+  for (key in obj) {
+    chiavi.push(key)
+  }
+  return chiavi;
+
+
+
 }
 
 const person = {

@@ -1,6 +1,11 @@
 function adultFilter(persons) {
-  const maggiori = persons.filter(elemento => elemento.age > 18);
-  return maggiori;
+  const maggiorenni = [];
+  for (let i = 0; i < 10; i++) {
+    if (persons[i].age >= 18) {
+      maggiorenni.push(persons[i].name);
+    }
+  }
+  return maggiorenni;
 }
 
 const persons = [{

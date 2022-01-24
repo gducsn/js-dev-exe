@@ -1,5 +1,12 @@
 function calculateAverageAge(persons) {
-  return persons.reduce((somma, user) => somma + user.age, 0) / persons.length;
+
+  let somma = 0;
+  for (person of persons) {
+    somma += person.age;
+  }
+  return somma / persons.length
+
+
 
 }
 
