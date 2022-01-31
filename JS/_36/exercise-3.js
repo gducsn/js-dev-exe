@@ -4,8 +4,8 @@ class Person {
     this.lastName = lastName;
   }
 
-  static fromObject(a) {
-    return Object.create(a)
+  static fromObject(obj) {
+    return new Person(obj.firstName, obj.lastName)
   }
 
 
