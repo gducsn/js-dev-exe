@@ -1,6 +1,13 @@
 function memoize(fn) {
   let cache = {};
-
+  return function (p1) {
+    if (p1 in cache) {
+      return cache;
+    } else {
+      cache[p1] = fn(p1);
+      return cache[p1];
+    }
+  }
 
 
 }
