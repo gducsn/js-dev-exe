@@ -5,17 +5,17 @@ class Person {
     this.age = age;
   }
 
-  get getnome() {
+  get _firstName() {
     return this.firstName;
 }
-  set setnome(name) {
+  set _firstName(name) {
     this.firstName = name;
 }
 
-get getcognome() {
+get _lastName() {
   return this.lastName;
 }
-set setcognome(cn) {
+set _lastName(cn) {
   this.lastName = cn;
 }
 
