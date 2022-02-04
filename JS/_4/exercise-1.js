@@ -1,15 +1,15 @@
 function calculateSalary(role) {
 
   if (role == "ceo") {
-    console.log("2200");
+    return 2200;
   } else if (role == "manager") {
-    console.log("1800");
+    return 1800;
   } else if (role == "cto") {
-    console.log("1750");
+    return 1750;
   } else if (role == "developer") {
-    console.log("1500");
+    return 1500;
   } else {
-    console.log("1000");
+    return 1000;
   }
 }
 
