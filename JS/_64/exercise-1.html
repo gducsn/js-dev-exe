@@ -1,0 +1,29 @@
+<html>
+
+<body>
+  <div id="container">
+    <button type="button" id="fetch-post">Fetch Post</button>
+    <button type="button" id="save-post">Save Post on LocalStorage</button>
+  </div>
+</body>
+
+</html>
+
+<script>
+  const btn = document.querySelector("#fetch-post");
+  const savebtn = document.querySelector("#save-post");
+
+  async function download() {
+    let fetchData = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+    let fetchJson = await fetchData.json();
+    let testo = JSON.stringify(fetchJson)
+    let storage = await
+
+    function saveData() {
+      localStorage.setItem("data", testo);
+    }
+    savebtn.onclick = storage;
+  }
+
+  btn.onclick = download;
+</script>

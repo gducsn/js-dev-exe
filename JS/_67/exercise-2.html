@@ -1,0 +1,24 @@
+<html>
+
+<body>
+  <div id="container" style="display: flex; align-items: center;"></div>
+</body>
+
+</html>
+
+<script>
+  async function download() {
+    const h2Element = document.createElement("h2");
+    const inputElement = document.createElement("input");
+    let fetchPost = await fetch("https://jsonplaceholder.typicode.com/todos/4");
+    let fetchJson = await fetchPost.json();
+    inputElement.setAttribute("type", "checkbox")
+    inputElement.checked = fetchJson.completed;
+    h2Element.innerHTML += fetchJson.title;
+    let divElement = document.querySelector("#container");
+    divElement.append(h2Element)
+    divElement.append(inputElement)
+  }
+
+  download();
+</script>

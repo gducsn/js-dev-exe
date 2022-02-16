@@ -1,0 +1,23 @@
+<html>
+
+<body>
+  <div id="container">
+    <ul class="todo-list"></ul>
+
+  </div>
+</body>
+
+</html>
+
+<script>
+  async function recover() {
+    let list = await fetch("https://jsonplaceholder.typicode.com/todos");
+    let fetchJson = list.json().then(x => {
+      x.forEach(element => {
+        const todoList = document.querySelector(".todo-list");
+        todoList.innerHTML += `<li>${element.title}</li>`
+      });
+    })
+  }
+  recover()
+</script>

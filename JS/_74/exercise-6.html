@@ -1,0 +1,45 @@
+<html>
+
+<body>
+  <div id="container">
+    <h2>Person's Form</h2>
+    <form id="person-form">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
+
+<script>
+  const body = document.querySelector("body");
+
+  function initForm() {
+    let formData = document.querySelector("form")
+    formData.innerHTML += `<input type="text" id="nome" placeholder="First Name">
+    <input type="text" id="cognome" placeholder="Last Name">
+    <input type="text" id="anni" placeholder="Age">`;
+    body.append(formData)
+
+  }
+  initForm();
+
+  const button = document.querySelector("button");
+  button.addEventListener('click', submitPersonForm)
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+  });
+
+  function submitPersonForm() {
+
+    const nameInput = document.querySelector("#nome").value
+    const cognomeInput = document.querySelector("#cognome").value
+    const anniInput = document.querySelector("#anni").value
+    let person = {
+      nome: nameInput,
+      congome: cognomeInput,
+      anni: anniInput,
+    }
+    console.log(person);
+  }
+</script>
