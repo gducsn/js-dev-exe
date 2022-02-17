@@ -1,18 +1,24 @@
 <html>
-  <body>
-    <div id="container">
-      <h2>Hero's List</h2>
-      <ul class="hero-list">
-        <li class="hero-list-item">Batman</li>
-        <li class="hero-list-item">Superman</li>
-        <li class="hero-list-item">Spiderman</li>
-        <li class="hero-list-item">Hulk</li>
-        <li class="hero-list-item">Wolverine</li>
-      </ul>
-    </div>
-  </body>
+
+<body>
+  <div id="container">
+    <h2>Hero's List</h2>
+    <ul class="hero-list">
+      <li class="hero-list-item">Batman</li>
+      <li class="hero-list-item">Superman</li>
+      <li class="hero-list-item">Spiderman</li>
+      <li class="hero-list-item">Hulk</li>
+      <li class="hero-list-item">Wolverine</li>
+    </ul>
+  </div>
+</body>
+
 </html>
 
 <script>
-  // code here
+  const heroItems = document.querySelector(".hero-list-item:nth-child(5)")
+  heroItems.addEventListener("mouseover", (x) => {
+    heroItems.style.color = "red";
+    setTimeout(() => heroItems.style.color = `transparent`, 500)
+  });
 </script>
